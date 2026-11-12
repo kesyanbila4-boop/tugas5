@@ -1,0 +1,30 @@
+
+name: Build EXE Genap Ganjil
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Compiler
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++-mingw-w64-x86-64
+
+      - name: Compile C++ to EXE
+        run: |
+          x86_64-w64-mingw32-g++ genap_ganjil.cpp -o genap_ganjil.exe -static -static-libgcc -static-libstdc++
+
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: genap_ganjil-exe
+          path: genap_ganjil.exe
