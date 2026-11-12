@@ -1,23 +1,25 @@
-
 #include <iostream>
 using namespace std;
 
 int main() {
-    int bilangan;
+    int angka;
 
-    cout << "================================" << endl;
-    cout << " PROGRAM BILANGAN GENAP GANJIL " << endl;
-    cout << "================================" << endl;
+    cout << "==============================" << endl;
+    cout << "     CEK GENAP ATAU GANJIL" << endl;
+    cout << "==============================" << endl;
 
-    cout << "Masukkan bilangan: ";
-    cin >> bilangan;
+    cout << "Masukkan angka: ";
+    cin >> angka;
 
-    if (bilangan % 2 == 0) {
-        cout << "Bilangan " << bilangan << " adalah GENAP" << endl;
+    if (angka % 2 == 0) {
+        cout << "Bilangan " << angka << " adalah GENAP" << endl;
     }
     else {
-        cout << "Bilangan " << bilangan << " adalah GANJIL" << endl;
+        cout << "Bilangan " << angka << " adalah GANJIL" << endl;
     }
 
+    cout << "==============================" << endl;
+
+    system("pause");
     return 0;
 }
