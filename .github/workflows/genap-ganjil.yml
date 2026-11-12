@@ -21,10 +21,10 @@ jobs:
 
       - name: Compile C++ to EXE
         run: |
-          x86_64-w64-mingw32-g++ genap_ganjil.cpp -o genap_ganjil.exe -static -static-libgcc -static-libstdc++
+          x86_64-w64-mingw32-g++ tugas5.cpp -o tugas5.exe -static -static-libgcc -static-libstdc++
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
-          name: genap_ganjil-exe
-          path: genap_ganjil.exe
+          name: tugas5-exe
+          path: tugas5.exe
